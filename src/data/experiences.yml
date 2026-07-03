@@ -1,0 +1,31 @@
+internships:
+  - period: 2024.08 - 2025.04
+    title: University College London
+    detail: JST ASPIRE'23
+    url: https://www.jst.go.jp/inter/aspire/en/program_e/announce_e/announce_aspire2023_e.html
+  - period: 2022.10 - 2022.12
+    title: NEC Corporation
+    detail: R&D, dynamic forecasting
+    url: https://www.nec.com/
+fellowships:
+  - period: 2023.04 - present
+    title: Research Fellowship for Young Scientists
+    detail: "DC2, JSPS (acceptance rate: 18.5 %)"
+    url: https://www.jsps.go.jp/english/e-pd/
+  - period: 2020.09 - present
+    title: International Graduate Program of IIW
+    detail: "acceptance rate: 48.1 %"
+    url: https://www.iiw.i.u-tokyo.ac.jp/en/
+education:
+  - period: 2022.04 - present
+    title: Ph.D. in Complexity Science and Engineering
+    detail: The University of Tokyo (Shinoda & Makino Lab)
+    url: https://hapislab.org/en/
+  - period: 2020.04 - 2022.03
+    title: M.S. in Complexity Science and Engineering
+    detail: The University of Tokyo (Shinoda & Makino Lab)
+    url: https://hapislab.org/en/
+  - period: 2016.04 - 2020.03
+    title: B.S. in Applied Electronics
+    detail: Tokyo University of Science (Ikuno Lab)
+    url: https://www.rs.tus.ac.jp/tikuno/

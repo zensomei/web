@@ -1,0 +1,32 @@
+publications:
+  - title: Spatial Resolution of Mesoscopic Pattern via Contact Position Control using Airborne Ultrasound
+    authors:
+      - Zen Somei
+      - Tao Morisaki
+      - Shun Suzuki
+      - Yasutoshi Makino
+      - Hiroyuki Shinoda
+    venue: In Proc. IEEE ToH'24
+    year: 2024
+    status: full paper, under review
+    image: images/toh2023-1.svg
+    description: We were able to create convex and concave surfaces using mid-air ultrasound. In this paper, we compared three methods for creating these surfaces and find that the approach focusing on "position" is most suitable. Additionally, we used this method to investigate the spatial resolution.
+    links:
+      - label: Upcoming
+        url: ""
+  - title: Spatial Resolution of Mesoscopic Shapes
+    authors:
+      - Zen Somei
+      - Tao Morisaki
+      - Yutaro Toide
+      - Masahio Fujiwara
+      - Yasutoshi Makino
+      - Hiroyuki Shinoda
+    venue: In Proc. Eurohaptics'22
+    year: 2022
+    status: "full paper, acceptance rate: 57.0 %"
+    image: images/euro2022-3.png
+    description: We were able to create convex surfaces using mid-air ultrasound. In this paper, we created two convex surfaces within the newly defined mesoscopic scale and examined the spatial resolution, which is how close the two can be without being perceived as one.
+    links:
+      - label: View Paper
+        url: https://link.springer.com/chapter/10.1007/978-3-031-06249-0_28
