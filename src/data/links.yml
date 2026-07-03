@@ -1,0 +1,10 @@
+links:
+  - label: CV
+    url: documents/cv.pdf
+    type: internal
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/zen-somei/
+    type: external
+  - label: Email
+    url: "mailto:somei@hapis.k.u-tokyo.ac.jp"
+    type: external

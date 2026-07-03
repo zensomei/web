@@ -1,0 +1,109 @@
+---
+interface PublicationLink {
+  label: string;
+  url?: string;
+}
+
+interface Publication {
+  title: string;
+  authors: string[];
+  venue: string;
+  year: number;
+  status: string;
+  image: string;
+  description: string;
+  links: PublicationLink[];
+}
+
+interface Props {
+  publication: Publication;
+  assetPath: (path: string) => string;
+}
+
+const { publication, assetPath } = Astro.props;
+const titleLink = publication.links.find((link) => link.url)?.url;
+---
+
+<article class="publication-card">
+  <img src={assetPath(publication.image)} alt="" loading="lazy" />
+  <div class="publication-body">
+    <h3>
+      {
+        titleLink ? (
+          <a href={titleLink} target="_blank" rel="noreferrer">{publication.title}</a>
+        ) : (
+          publication.title
+        )
+      }
+    </h3>
+    <p class="authors">{publication.authors.join(', ')}</p>
+    <p class="venue">{publication.venue} ({publication.status})</p>
+    <p>{publication.description}</p>
+    <div class="button-row">
+      {
+        publication.links.map((link) =>
+          link.url ? (
+            <a class="button-link" href={link.url} target="_blank" rel="noreferrer">{link.label}</a>
+          ) : (
+            <span class="button-link">{link.label}</span>
+          ),
+        )
+      }
+    </div>
+  </div>
+</article>
+
+<style>
+  .publication-card {
+    display: grid;
+    gap: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 1rem;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+
+  img {
+    width: 100%;
+    border-radius: 6px;
+    background: var(--surface-muted);
+    object-fit: contain;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    letter-spacing: 0;
+  }
+
+  h3 a {
+    color: var(--text);
+  }
+
+  p {
+    margin: 0.65rem 0 0;
+  }
+
+  .authors {
+    color: var(--text);
+    font-weight: 650;
+  }
+
+  .venue {
+    color: var(--muted);
+  }
+
+  .button-row {
+    margin-top: 0.9rem;
+  }
+
+  @media (min-width: 760px) {
+    .publication-card {
+      grid-template-columns: minmax(220px, 0.55fr) 1fr;
+      gap: 1.25rem;
+      padding: 1.15rem;
+    }
+  }
+</style>

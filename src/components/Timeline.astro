@@ -1,0 +1,93 @@
+---
+interface TimelineItem {
+  period?: string;
+  date?: string;
+  title?: string;
+  name?: string;
+  detail?: string;
+  event?: string;
+  url?: string;
+}
+
+interface Props {
+  title: string;
+  items: TimelineItem[];
+}
+
+const { title, items } = Astro.props;
+---
+
+<div class="timeline-block">
+  <h3>{title}</h3>
+  <ol class="timeline">
+    {
+      items.map((item) => {
+        const heading = item.title ?? item.name;
+        const date = item.period ?? item.date;
+        const detail = item.detail ?? item.event;
+        return (
+          <li>
+            <span class="date">{date}</span>
+            <div>
+              <h4>
+                {item.url ? <a href={item.url} target="_blank" rel="noreferrer">{heading}</a> : heading}
+              </h4>
+              {detail && <p>{detail}</p>}
+            </div>
+          </li>
+        );
+      })
+    }
+  </ol>
+</div>
+
+<style>
+  .timeline-block {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 1rem;
+    background: var(--surface);
+  }
+
+  h3 {
+    margin: 0 0 0.8rem;
+    font-size: 1.1rem;
+  }
+
+  .timeline {
+    display: grid;
+    gap: 0.9rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: grid;
+    gap: 0.25rem;
+    border-top: 1px solid var(--line);
+    padding-top: 0.85rem;
+  }
+
+  li:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .date {
+    color: var(--accent-strong);
+    font-size: 0.88rem;
+    font-weight: 800;
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  p {
+    margin: 0.15rem 0 0;
+    color: var(--muted);
+  }
+</style>

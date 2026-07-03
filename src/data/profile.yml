@@ -1,0 +1,32 @@
+name: Zen Somei
+japaneseName: 曽明 然
+title: Ph.D. candidate
+affiliation:
+  name: Shinoda & Makino Lab, The University of Tokyo
+  url: https://hapislab.org/en/
+fellowship: Research Fellowship for Young Scientists DC2, JSPS
+researchInterests:
+  - Mid-air Haptics
+  - High-performance computing
+  - Human-computer interaction
+  - VR
+  - AR
+  - Ultrasound
+email: somei [at] hapis.k.u-tokyo.ac.jp
+cv: documents/cv.pdf
+image: images/profile.jpeg
+avatar: images/avatar.png
+recentWork:
+  title: Airborne Bumpy Surfaces Presented by Ultrasound
+  award: Best Demo Award 3rd place, Eurohaptics'22
+  video: https://www.youtube.com/embed/h4mIWzhCgyw
+  authors:
+    - Zen Somei
+    - Tao Morisaki
+    - Yutaro Toide
+    - Masahio Fujiwara
+    - Yasutoshi Makino
+    - Hiroyuki Shinoda
+  event:
+    name: Eurohaptics'22
+    url: https://www.eurohaptics2022.org/
